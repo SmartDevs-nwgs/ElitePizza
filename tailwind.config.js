@@ -8,10 +8,23 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        mainBackground: 'url(../assets/images/main.png)',
       },
+    },
+    colors: {
+      red: '#990000',
+      red1: '#af080b',
+      red2: '#f11e2c',
+
+      green: '#00FF7F',
+
+      black: '#000000',
+      white: '#ffffff',
+      background: '#EEEEEE',
+    },
+    fontFamily: {
+      greatPrimer: ['"IM Fell Great Primer SC"', 'serif'],
+      lobster: ['Lobster', 'sans-serif'],
     },
   },
   plugins: [],
