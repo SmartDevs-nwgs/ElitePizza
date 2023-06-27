@@ -13,10 +13,10 @@ module.exports = {
     },
     colors: {
       red: '#990000',
-      red1: '#af080b',
+      red1: '#AF080B',
       red2: '#f11e2c',
 
-      green: '#00FF7F',
+      green: '#4BA865',
 
       black: '#000000',
       white: '#ffffff',

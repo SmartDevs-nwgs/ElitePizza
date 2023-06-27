@@ -4,8 +4,8 @@ import pizza from '../../assets/images/titleImg.png'
 const Title = () => {
   return (
     <>
-      <main className="flex flex-col md:flex-row bg-mainBackground w-screen justify-around items-center p-16">
-        <div className="md:w-1/2">
+      <main className="flex flex-col md:flex-row bg-mainBackground w-screen justify-around items-center p-16 ">
+        <div className="">
           <Image src={pizza} />
         </div>
         <div className="flex flex-col items-center max-w-4xl">
