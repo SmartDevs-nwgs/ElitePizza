@@ -33,7 +33,7 @@ const Promotions = () => {
           {promotions.map((promotion, index) => (
             <div
               key={index}
-              className="bg-white rounded-[15px] p-5  text-center"
+              className="bg-white rounded-[15px] p-5 text-center"
             >
               <Image src={promotion.img} alt={promotion.name} />
               <div>
