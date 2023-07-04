@@ -1,6 +1,6 @@
 const card1 = () => {
   return (
-    <div className="w-[1300px] h-[134px] bg-red1 rounded-[5px] flex p-10">
+    <div className="w-[900px] h-[134px] bg-red1 rounded-[5px] flex p-10">
       <div className="flex flex-col justify-center">
         <p className="text-white text-2xl">
           Aproveite nossas <span className="font-bold "> promossões!</span>

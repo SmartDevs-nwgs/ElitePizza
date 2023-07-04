@@ -1,11 +1,22 @@
+'use client'
+
+import { createContext, useEffect, useState } from 'react'
+import { api } from '@/services/api'
+
+export const ClientContext = createContext({})
+
 export const clientProvider = () => {
-  const login = async () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const loginInfo = {
+    email: email,
+    password: password,
+  }
+
+  const login = async (loginInfo) => {
     return await api
-      .post(`https://eliteback-api.onrender.com/login`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .post(`login`)
       .then((response) => {
         console.log(response)
       })
@@ -16,7 +27,7 @@ export const clientProvider = () => {
 
   const updateUser = async () => {
     return await api
-      .patch(`https://eliteback-api.onrender.com/users/update`, {
+      .patch(`users/update`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -31,7 +42,7 @@ export const clientProvider = () => {
 
   const createUser = async () => {
     return await api
-      .post(`https://eliteback-api.onrender.com/users`, {
+      .post(`users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -43,10 +54,18 @@ export const clientProvider = () => {
         console.log(error)
       })
   }
-
-  return {
+  const contextValue = {
     login,
     createUser,
     updateUser,
+    setEmail,
+    setPassword,
+    loginInfo,
   }
+
+  return (
+    <ClientContext.Provider value={contextValue}>
+      {children}
+    </ClientContext.Provider>
+  )
 }

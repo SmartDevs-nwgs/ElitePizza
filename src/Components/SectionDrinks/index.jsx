@@ -3,14 +3,14 @@ const SectionDrinks = () => {
     <main className=" flex justify-center mt-10">
       <div
         id="container"
-        className="flex flex-col items-center justify-center w-[1300px]"
+        className="flex flex-col items-center justify-center w-[900px]"
       >
         <section className="w-full">
           <h1 className="font-bold underline text-4xl">Refrigerantes</h1>
           <div className="border-solid border-b-2 mt-5">
             <div className="flex justify-between mt-3 mb-3">
               <h1 className="font-bold text-2xl">Refrigerante 600ml</h1>
-              <h2 className="text-green text-2xl font-bold">R$5,00</h2>
+              <h2 className="text-green text-2xl font-bold">R$ 5,00</h2>
             </div>
             <p className="font-medium text-xl">Garrafa 600ml</p>
           </div>
@@ -34,7 +34,7 @@ const SectionDrinks = () => {
           <div className="border-solid border-b-2 mt-5">
             <div className="flex justify-between mt-3 mb-3">
               <h1 className="font-bold text-2xl">Cerveja 350ml</h1>
-              <h2 className="text-green text-2xl font-bold">R$5,00</h2>
+              <h2 className="text-green text-2xl font-bold">R$ 5,00</h2>
             </div>
             <p className="font-medium text-xl">Lata 350ml</p>
           </div>
