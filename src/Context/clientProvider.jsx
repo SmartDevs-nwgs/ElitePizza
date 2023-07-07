@@ -2,26 +2,24 @@
 
 import { createContext, useEffect, useState } from 'react'
 import { api } from '@/services/api'
+import { useContext } from 'react'
 
 export const ClientContext = createContext({})
 
 export const clientProvider = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [token, setToken] = useState('')
 
-  const loginInfo = {
-    email: email,
-    password: password,
-  }
-
-  const login = async (loginInfo) => {
+  const loginUser = async (data) => {
     return await api
-      .post(`login`)
+      .post(`login`, data)
       .then((response) => {
+        setToken(response.data)
+        console.log('success')
         console.log(response)
+        console.log(response.data)
       })
       .catch((error) => {
-        console.log(error)
+        console.log('error', error)
       })
   }
 
@@ -55,12 +53,15 @@ export const clientProvider = () => {
       })
   }
   const contextValue = {
-    login,
+    loginUser,
     createUser,
     updateUser,
     setEmail,
     setPassword,
     loginInfo,
+    email,
+    password,
+    token,
   }
 
   return (

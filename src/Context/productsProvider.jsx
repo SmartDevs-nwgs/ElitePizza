@@ -1,13 +1,15 @@
 'use client'
 
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState, useContext } from 'react'
 import { api } from '@/services/api'
+import { ClientContext } from '@/context/clientProvider'
 
 export const ProductsContext = createContext({})
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([])
   const [cartList, setCartList] = useState(0)
+  const { token } = useContext(ClientContext)
 
   const listProducts = async () => {
     return await api

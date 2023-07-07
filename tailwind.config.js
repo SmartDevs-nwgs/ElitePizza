@@ -6,6 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      xs: '347px',
+      lg: '900px',
+      xl: '1400px',
+    },
     extend: {
       backgroundImage: {
         mainBackground: 'url(../assets/images/main.png)',
@@ -21,6 +26,7 @@ module.exports = {
 
       black: '#000000',
       white: '#ffffff',
+      grey: '#B0C4DE',
       background: '#EEEEEE',
     },
     fontFamily: {
